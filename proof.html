@@ -49,6 +49,35 @@
     .stat { display:inline-block; font-family:'Caveat',cursive; font-weight:700; font-size:1.3rem;
       border-bottom:2.5px solid var(--ink); margin-top:6px; }
 
+    /* case study bits */
+    .case-label { font-family:'Caveat',cursive; font-weight:700; font-size:2.4rem; margin:8px 0 20px; transform:rotate(-1deg); }
+    .shot { border:3px solid var(--ink); border-radius:14px 10px 13px 11px / 11px 13px 10px 14px;
+      background:#fff; padding:8px; box-shadow:4px 5px 0 rgba(26,26,26,0.8); margin:10px 0 8px; }
+    .shot img { display:block; width:100%; border-radius:8px; }
+    .shot-cap { font-family:'Caveat',cursive; font-size:1.3rem; color:var(--ink-soft); margin:6px 0 30px; }
+
+    .statbox { border:2.5px solid var(--ink); border-radius:15px 255px 15px 225px / 225px 15px 255px 15px;
+      padding:20px 26px 22px; margin:34px 0; background:rgba(255,255,255,0.6); text-align:center; }
+    .stat-line { font-family:'Caveat',cursive; font-weight:700; font-size:3.6rem; line-height:1.05; }
+    .stat-line .from { color:var(--ink-soft); font-size:2.5rem; }
+    .stat-line .arrow { margin:0 12px; }
+    .stat-line .to { text-decoration:underline wavy 2px; text-underline-offset:8px; }
+    .stat-sub { font-size:1.3rem; margin-top:10px; }
+
+    /* fanned/stacked post spread (like a fan of bills) */
+    .spread-wrap { overflow-x:auto; overflow-y:hidden; padding:30px 0 20px; margin:6px 0; }
+    .spread { display:flex; width:max-content; padding:0 10px; align-items:center; }
+    .post { width:130px; height:auto; flex:0 0 auto; display:block;
+      border:3px solid #fff; border-radius:10px; background:#000;
+      box-shadow:3px 6px 14px rgba(0,0,0,0.38); }
+    .post:not(:first-child){ margin-left:-40px; }
+    .post:nth-child(1){ transform:rotate(-3deg);  z-index:1; }
+    .post:nth-child(2){ transform:rotate(2.2deg); z-index:2; }
+    .post:nth-child(3){ transform:rotate(-2deg);  z-index:3; }
+    .post:nth-child(4){ transform:rotate(3deg);   z-index:4; }
+    .post:nth-child(5){ transform:rotate(-1.6deg);z-index:5; }
+    .post:nth-child(6){ transform:rotate(2.6deg); z-index:6; }
+
     .cta { margin-top:64px; }
     .paybtn {
       display:inline-block; text-decoration:none;
@@ -67,16 +96,35 @@
     <h1>the proof.</h1>
     <svg class="squiggle" viewBox="0 0 220 14"><path d="M3 8 C 20 2, 35 12, 55 7 S 95 2, 115 8 S 160 13, 180 6 S 210 4, 217 8"/></svg>
 
-    <p>real artists who let me run their songs, in their own words. no paid reviews, no bots, no made-up numbers. just what actually happened.</p>
+    <p>less talk, more receipts. here's one artist i've worked with over the past year, with real numbers you can go check yourself.</p>
 
-    <!-- TESTIMONIALS GO HERE -->
-    <!-- template for each one:
-    <div class="card">
-      <p class="quote">"their quote goes here."</p>
-      <p class="who">artist name <span class="handle">@handle</span></p>
-      <span class="stat">optional result line (eg. 5,000 reached, 40 new saves)</span>
+    <div class="case-label">case study: WonderBag 🎧</div>
+
+    <div class="shot">
+      <img src="wonderbag/spotify.png" alt="WonderBag's verified Spotify page showing 194,080 monthly listeners">
     </div>
-    -->
+    <p class="shot-cap">↑ WonderBag's spotify today. verified, just under 200k monthly listeners.</p>
+
+    <div class="statbox">
+      <div class="stat-line"><span class="from">50k</span> <span class="arrow">→</span> <span class="to">~200k</span></div>
+      <div class="stat-sub">monthly listeners. <b>4x</b> in about a year.</div>
+    </div>
+
+    <p>when WonderBag started working with me he had around <b>50,000</b> monthly listeners. over the past year i've posted <b>hundreds</b> of his songs across my network of music pages. today he's sitting just under <b>200,000</b>, roughly <span class="u">4x the audience</span> he started with.</p>
+
+    <p>and it happened the exact way i tell everyone it does: real people finding his songs on my pages and going to stream them. here's just six of those posts.</p>
+
+    <div class="spread-wrap">
+      <div class="spread">
+        <img class="post" src="wonderbag/post1.png" alt="WonderBag post across jagger's music pages">
+        <img class="post" src="wonderbag/post2.png" alt="WonderBag post across jagger's music pages">
+        <img class="post" src="wonderbag/post3.png" alt="WonderBag post across jagger's music pages">
+        <img class="post" src="wonderbag/post4.png" alt="WonderBag post across jagger's music pages">
+        <img class="post" src="wonderbag/post5.png" alt="WonderBag post across jagger's music pages">
+        <img class="post" src="wonderbag/post6.png" alt="WonderBag post across jagger's music pages">
+      </div>
+    </div>
+    <p class="shot-cap">↑ six of the hundreds of posts i've run for his songs.</p>
 
     <div class="cta">
       <p>want your song on my pages next?</p>
