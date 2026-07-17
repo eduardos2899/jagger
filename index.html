@@ -164,6 +164,17 @@
       box-shadow: 3px 4px 0 rgba(26,26,26,0.85);
       transition: transform .1s, box-shadow .1s;
     }
+    .paybtn {
+      display: inline-block; text-decoration: none;
+      font-family: 'Caveat', cursive; font-size: 2.1rem; font-weight: 700; color: #fff;
+      background: var(--ink);
+      border: 3px solid var(--ink);
+      border-radius: 225px 18px 255px 18px / 18px 255px 18px 225px;
+      padding: 14px 44px; margin-top: 8px;
+      box-shadow: 5px 6px 0 rgba(26,26,26,0.4);
+      transition: transform .1s, box-shadow .1s;
+    }
+    .paybtn:hover { transform: translate(2px, 2px); box-shadow: 2px 3px 0 rgba(26,26,26,0.4); }
     button:hover { transform: translate(2px, 2px); box-shadow: 1px 2px 0 rgba(26,26,26,0.85); }
 
     .arrow-note { display: flex; align-items: center; gap: 10px; margin: -14px 0 30px; }
@@ -208,15 +219,16 @@
     <h2>how it works</h2>
     <ul class="hand">
       <li class="checked">you fill out the form below with your song link (spotify, tiktok sound, whatever you have)</li>
-      <li class="checked">i reply with a secure payment link. $10, money back guarantee</li>
+      <li class="checked">you pay the $10 right here on this page (money back guarantee)</li>
       <li class="checked">my team and i build tiktok posts around your song using our plug and play formats, the styles we've already proven convert</li>
-      <li class="checked">i keep posting across my pages until you reach the views i promised</li>
+      <li class="checked">i keep posting these small posts across my pages until they add up to the views i promised</li>
       <li class="checked">you get a link to every post, and you watch your own numbers do the talking</li>
     </ul>
     <p class="soft">small campaigns (under 10,000 views) are usually done in 2 days max. bigger ones take a few days more.</p>
 
     <h2>what a post looks like</h2>
     <p>deliberately simple. it's supposed to feel like a person posted it, because one did. this style blends into the feed, which is exactly why it works.</p>
+    <p>each post is small on its own. it's a bunch of them going out across my pages that add up to your 5,000. no single viral moment, just steady real reach that stacks up.</p>
 
     <div class="phone-wrap">
       <div class="sketch-phone">
@@ -251,7 +263,7 @@
     <h2 id="trial">ok, send me your song</h2>
     <div class="arrow-note">
       <svg width="46" height="40" viewBox="0 0 46 40"><path d="M42 4 C 30 10, 18 18, 10 30 M10 30 l 1 -9 M10 30 l 9 0"/></svg>
-      <span class="note" style="margin-bottom: 0;">fill this out and it opens an email to me. i reply with the payment link, and posting starts once you're in.</span>
+      <span class="note" style="margin-bottom: 0;">fill this out with your song, then pay below to lock it in. posting starts once you're in.</span>
     </div>
 
     <form id="trialForm">
@@ -274,6 +286,12 @@
       </div>
       <button type="submit">send it to jagger →</button>
     </form>
+
+    <h2 id="pay">last step: lock it in</h2>
+    <p>sent your song above? good. hit the button to pay your $10 and get in the queue. money back if i don't deliver.</p>
+    <!-- TODO: replace the href below with your real Stripe payment link (buy.stripe.com/...) -->
+    <a class="paybtn" href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK" target="_blank" rel="noopener">pay $10, run my song →</a>
+    <p class="soft" style="margin-top: 14px;">secure checkout with stripe. want a bigger run than 5,000? just say so when you send your song.</p>
 
     <footer>
       <p style="margin-bottom: 0;">contact: <a href="mailto:jaggerman068@gmail.com">jaggerman068@gmail.com</a></p>
