@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jagger. i get small artists heard on tiktok, free</title>
-  <meta name="description" content="i run a network of music pages on tiktok and i use them to help small artists get heard. free trial: i put your song in front of 5,000 real people, mostly US, no payment, no catch.">
+  <title>jagger. i get small artists heard on tiktok</title>
+  <meta name="description" content="i run a network of music pages on tiktok and i use them to help small artists get heard. $10 gets your song 5,000 real views, mostly US, money back if i don't deliver.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
       color: var(--ink);
       font-family: 'Patrick Hand', cursive;
       font-size: 1.25rem;
-      line-height: 32px;
+      line-height: 32px; /* matches the ruled lines */
       background-color: var(--paper);
       background-image:
         linear-gradient(to right, transparent 54px, #c9c9c9 54px, #c9c9c9 56px, transparent 56px),
@@ -45,9 +45,13 @@
     p, li { color: var(--ink); margin-bottom: 32px; }
     p.soft { color: var(--ink-soft); }
 
-    .squiggle { display: block; width: 220px; max-width: 60%; height: 14px; margin: -6px 0 26px; }
+    /* hand-drawn underline squiggle */
+    .squiggle {
+      display: block; width: 220px; max-width: 60%; height: 14px; margin: -6px 0 26px;
+    }
     .squiggle path { stroke: var(--ink); stroke-width: 2.5; fill: none; stroke-linecap: round; }
 
+    /* wobbly hand-drawn boxes */
     .box {
       border: 2.5px solid var(--ink);
       border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
@@ -57,6 +61,7 @@
     }
     .box.alt { border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px; }
 
+    /* lists as handwritten checkboxes */
     ul.hand { list-style: none; margin-bottom: 32px; }
     ul.hand li { padding-left: 40px; position: relative; margin-bottom: 0; }
     ul.hand li::before {
@@ -70,13 +75,16 @@
     }
 
     .big-hand { font-family: 'Caveat', cursive; font-size: 1.9rem; font-weight: 500; }
+    .scratch { text-decoration: line-through; text-decoration-thickness: 2.5px; }
     .u { text-decoration: underline wavy 1.5px; text-underline-offset: 5px; }
 
+    /* margin doodle notes */
     .note {
       font-family: 'Caveat', cursive; font-size: 1.4rem; color: var(--ink-soft);
       transform: rotate(-2deg); display: inline-block; margin-bottom: 32px;
     }
 
+    /* the taped-on headshot */
     .headshot-wrap {
       float: right; position: relative;
       transform: rotate(2.5deg);
@@ -101,6 +109,7 @@
       text-align: center; margin: 6px 0 0; line-height: 1.2;
     }
 
+    /* the sketched phone (video) */
     .phone-wrap { text-align: center; margin: 48px 0; }
     .sketch-phone {
       display: inline-block; padding: 14px 12px 18px;
@@ -126,6 +135,12 @@
     }
     .phone-caption { display: block; margin-top: 22px; text-align: center; }
 
+    /* pricing scribble table */
+    .math { font-size: 1.35rem; }
+    .math .row { display: flex; justify-content: space-between; max-width: 380px; border-bottom: 2px dashed var(--ink-soft); padding: 3px 4px; }
+    .math .row:last-child { border-bottom: none; }
+    .math .row b { font-family: 'Caveat', cursive; font-size: 1.5rem; }
+
     /* form styled like a paper form */
     form { margin-top: 8px; }
     .field { margin-bottom: 34px; }
@@ -140,15 +155,30 @@
     .hint { font-size: 1rem; color: var(--ink-soft); line-height: 1.4; }
 
     button {
+      font-family: 'Caveat', cursive; font-size: 1.8rem; font-weight: 700; color: var(--ink);
+      background: #fff; cursor: pointer;
+      border: 3px solid var(--ink);
+      border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+      padding: 10px 34px; margin-top: 6px;
+      box-shadow: 3px 4px 0 rgba(26,26,26,0.85);
+      transition: transform .1s, box-shadow .1s;
+    }
+    .paybtn {
+      display: inline-block; text-decoration: none;
       font-family: 'Caveat', cursive; font-size: 2.1rem; font-weight: 700; color: #fff;
-      background: var(--ink); cursor: pointer;
+      background: var(--ink);
       border: 3px solid var(--ink);
       border-radius: 225px 18px 255px 18px / 18px 255px 18px 225px;
       padding: 14px 44px; margin-top: 8px;
       box-shadow: 5px 6px 0 rgba(26,26,26,0.4);
       transition: transform .1s, box-shadow .1s;
     }
-    button:hover { transform: translate(2px, 2px); box-shadow: 2px 3px 0 rgba(26,26,26,0.4); }
+    .paybtn:hover { transform: translate(2px, 2px); box-shadow: 2px 3px 0 rgba(26,26,26,0.4); }
+    button:hover { transform: translate(2px, 2px); box-shadow: 1px 2px 0 rgba(26,26,26,0.85); }
+
+    .arrow-note { display: flex; align-items: center; gap: 10px; margin: -14px 0 30px; }
+    .arrow-note svg { flex-shrink: 0; }
+    .arrow-note svg path { stroke: var(--ink); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
     footer { margin-top: 80px; color: var(--ink-soft); font-size: 1.05rem; }
     a { color: var(--ink); }
@@ -169,11 +199,11 @@
     <p>labels and big artists pay serious money to get their songs on pages like mine. i think that's kind of backwards. the artists who actually <span class="u">need</span> the reach are the small ones. so this is what i do: i use my network to get independent artists heard.</p>
 
     <div class="box">
-      <p class="big-hand" style="margin-bottom: 8px;">the deal: i'll get your song heard by 5,000 real people. free.</p>
-      <p style="margin-bottom: 0;">send me your song and i post it across my pages until it reaches 5,000 views. real people, almost all in the US, zero bots. it's a free trial i'm running for a handful of artists right now. no payment, no signup, no catch.</p>
+      <p class="big-hand" style="margin-bottom: 8px;">the deal: $10 gets your song 5,000 real views.</p>
+      <p style="margin-bottom: 0;">send me your song and i post it across my pages until it reaches 5,000 views. real people, almost all in the US, zero bots. if i don't get you there, you get your money back. no subscriptions, no contract, just one small run.</p>
     </div>
 
-    <span class="note">↑ yeah, actually free. real views from real people. keep reading, i'll show you.</span>
+    <span class="note">↑ yes, ten bucks total. real views from real people. keep reading, i'll show you.</span>
 
     <h2>here's what it actually looks like</h2>
     <p>deliberately simple posts. they're supposed to feel like a person made them, because one did. that's what blends into the feed and gets your song heard instead of scrolled past.</p>
@@ -188,6 +218,10 @@
       <p class="phone-caption note">↑ a real post from one of my pages.</p>
     </div>
 
+    <h2>why so cheap?</h2>
+    <p>no trick, that's just the math. my rate is $2 per 1,000 views, and 5,000 is the smallest run i do. the $10 is the minimum order, and it's meant to be a test: a low-stakes way to see if you like how i work and, more importantly, how real people react to your music. once you've watched it play out, you'll know if a bigger run is worth it.</p>
+    <p>i'd honestly rather you spend ten bucks and see for yourself than have me talk you into anything. i prove it cheap first, you decide after.</p>
+
     <h2>the honest part</h2>
     <div class="box">
       <p style="margin-bottom: 0;">i can't make people like your song. nobody can, and anyone who promises that is lying to you. what i <span class="u">can</span> do is put it in front of a 100% organic audience of real people, <span class="u">almost all of them in the US</span>. if the song connects, you'll watch it happen in your own stats.</p>
@@ -196,65 +230,41 @@
 
     <p class="note" style="transform:rotate(-1deg);"><a href="proof.html">don't take my word for it, see the proof →</a></p>
 
-    <h2>why free?</h2>
-    <p>it's a new method and it works, so i'd rather show you than tell you. i run a handful of these free trials at a time to prove it out with real artists. if you love how it goes and want a bigger push later, it's just $2 per 1,000 views. but this first run is on me, no strings.</p>
-
     <h2>how it works</h2>
     <ul class="hand">
-      <li class="checked">you fill out the quick form below with your song</li>
+      <li class="checked">you hit the button below and pay your $10 (money back guarantee)</li>
+      <li class="checked">at checkout you tell me your song, plus a timestamp if you want a specific part featured</li>
       <li class="checked">my team and i build the posts using our plug and play formats, the styles we've already proven get views</li>
       <li class="checked">i keep posting them across my pages until they add up to your 5,000 views</li>
       <li class="checked">i email you a link to every post, and you watch your own numbers do the talking</li>
     </ul>
-    <p class="soft">a 5,000 run is usually done within a day or two.</p>
+    <p class="soft">a 5,000 run is usually done within a day or two. bigger runs take a few days more.</p>
 
-    <h2 id="signup">ready? send me your song.</h2>
-    <p>fill this out and i'll get back to you personally to kick off your free run. it takes about a minute.</p>
-    <form id="trial-form">
-      <div class="field">
-        <label for="artist">your artist name (as on spotify)</label>
-        <input type="text" id="artist" name="artist" placeholder="the name people search" required>
-      </div>
-      <div class="field">
-        <label for="song">the song you want me to run</label>
-        <input type="text" id="song" name="song" placeholder="song title" required>
-      </div>
-      <div class="field">
-        <label for="timestamps">part of the song to feature (optional)</label>
-        <input type="text" id="timestamps" name="timestamps" placeholder="a timestamp if you want a specific part, eg 0:45-1:05">
-        <p class="hint">leave it blank and i'll pick the catchiest part myself.</p>
-      </div>
-      <div class="field">
-        <label for="email">your best email</label>
-        <input type="email" id="email" name="email" placeholder="where i send your results" required>
-        <p class="hint">that's where i send the links to every post when it's done.</p>
-      </div>
-      <button type="submit">start my free run →</button>
-    </form>
+    <h2>want a bigger run? same rate.</h2>
+    <p>the $10 starter is just the smallest size. everything i do is one simple price:</p>
+    <div class="box" style="text-align: center;">
+      <p class="big-hand" style="margin-bottom: 0; font-size: 2.2rem;">$2 for every 1,000 views</p>
+    </div>
+    <p>you pick the size, anywhere from 5,000 up to 50,000, and that's the price:</p>
+    <div class="box math">
+      <div class="row"><span>5,000 views (the starter)</span> <b>$10</b></div>
+      <div class="row"><span>10,000 views</span> <b>$20</b></div>
+      <div class="row"><span>25,000 views</span> <b>$50</b></div>
+      <div class="row"><span>50,000 views</span> <b>$100</b></div>
+    </div>
+    <p class="soft">for comparison: 25,000 views worth of regular paid ads runs around $200. i charge $50 for the same reach, with the posts made for you. and the guarantee holds at every size: <span class="u" style="color: var(--ink);">you get the views i promised or your money back.</span></p>
+
+    <h2 id="pay">ready? run your song.</h2>
+    <p>hit the button, pay your $10, and drop your song details right there at checkout. that's the whole thing. posting starts once you're in, and you're covered by the money back guarantee.</p>
+    <p class="soft">one thing: at checkout, use your best email. that's where i send your results and reach out if i need anything else from you.</p>
+    <a class="paybtn" href="https://buy.stripe.com/eVqbJ0a97ckU6h70V4e7m01" target="_blank" rel="noopener">pay $10, run my song →</a>
+    <p class="soft" style="margin-top: 14px;">secure checkout with stripe.</p>
 
     <footer>
-      <p style="margin-bottom: 6px;">questions first? email me: <a href="mailto:jaggerman068@gmail.com">jaggerman068@gmail.com</a></p>
+      <p style="margin-bottom: 6px;">questions or a refund? email me: <a href="mailto:jaggerman068@gmail.com">jaggerman068@gmail.com</a></p>
+      <p style="margin-bottom: 6px;"><a href="terms.html">refund policy &amp; terms</a></p>
       <p style="margin-bottom: 0;">- Jagger The Music Guy</p>
     </footer>
   </div>
-
-  <script>
-    document.getElementById('trial-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var artist = document.getElementById('artist').value.trim();
-      var song = document.getElementById('song').value.trim();
-      var timestamps = document.getElementById('timestamps').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var subject = 'free run signup: ' + (artist || 'new artist');
-      var body =
-        'artist: ' + artist + '\n' +
-        'song: ' + song + '\n' +
-        'timestamps: ' + timestamps + '\n' +
-        'email: ' + email + '\n';
-      window.location.href = 'mailto:jaggerman068@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
-    });
-  </script>
 </body>
 </html>
