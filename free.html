@@ -221,9 +221,9 @@
         <input type="text" id="song" name="song" placeholder="song title" required>
       </div>
       <div class="field">
-        <label for="link">a link to the song</label>
-        <input type="url" id="link" name="link" placeholder="spotify, soundcloud, anywhere i can hear it" required>
-        <p class="hint">i just need to hear it. i don't touch your streaming or add it to playlists.</p>
+        <label for="timestamps">part of the song to feature (optional)</label>
+        <input type="text" id="timestamps" name="timestamps" placeholder="a timestamp if you want a specific part, eg 0:45-1:05">
+        <p class="hint">leave it blank and i'll pick the catchiest part myself.</p>
       </div>
       <div class="field">
         <label for="email">your best email</label>
@@ -244,13 +244,13 @@
       e.preventDefault();
       var artist = document.getElementById('artist').value.trim();
       var song = document.getElementById('song').value.trim();
-      var link = document.getElementById('link').value.trim();
+      var timestamps = document.getElementById('timestamps').value.trim();
       var email = document.getElementById('email').value.trim();
       var subject = 'free run signup: ' + (artist || 'new artist');
       var body =
         'artist: ' + artist + '\n' +
         'song: ' + song + '\n' +
-        'link: ' + link + '\n' +
+        'timestamps: ' + timestamps + '\n' +
         'email: ' + email + '\n';
       window.location.href = 'mailto:jaggerman068@gmail.com'
         + '?subject=' + encodeURIComponent(subject)
